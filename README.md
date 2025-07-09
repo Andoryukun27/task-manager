@@ -8,9 +8,8 @@ A simple **Task Management Web Application** built with Laravel 10 and PHP 8, su
 
 🌐 [https://task-manager-uac5.onrender.com/tasks](https://task-manager-uac5.onrender.com/tasks)
 
-> ⚠️ **Note:**  
-> You may see a browser warning (e.g., “Not Secure” or “Deceptive Site”) because this is deployed on Render’s free Docker tier without HTTPS.  
-> This is a **false flag**, and all form submissions are protected using **Laravel’s CSRF**.  
+> ⚠️ **Note:**
+> “Please wait a few seconds when opening the site. It may take up to a minute to load the first time due to Render’s free-tier sleep policy.”
 > The source code is 100% clean and safe.  
 > For full functionality, clone and run locally (see steps below 👇).
 
