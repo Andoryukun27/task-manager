@@ -1,17 +1,11 @@
 services:
   - type: web
     name: task-manager
-    runtime: php
-    repo: https://github.com/Andoryukun27/task-manager
+    env: docker
+    plan: free
     branch: master
-    buildCommand: |
-      composer install
-      php artisan key:generate
-      php artisan migrate --force
-    startCommand: php artisan serve --host=0.0.0.0 --port=10000
+    dockerfilePath: ./Dockerfile
     envVars:
-      - key: PORT
-        value: 10000
       - key: APP_ENV
         value: production
       - key: APP_KEY
@@ -19,4 +13,6 @@ services:
       - key: DB_CONNECTION
         value: sqlite
       - key: DB_DATABASE
-        value: /opt/render/project/src/database/database.sqlite
+        value: /var/www/database/database.sqlite
+      - key: PORT
+        value: 8000
