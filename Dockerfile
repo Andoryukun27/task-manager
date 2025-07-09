@@ -19,6 +19,9 @@ WORKDIR /var/www
 # Copy app files
 COPY . .
 
+# Create SQLite DB file before migrations
+RUN touch database/database.sqlitegit
+
 # Install Laravel dependencies
 RUN composer install --optimize-autoloader --no-dev
 
