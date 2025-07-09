@@ -6,7 +6,6 @@
 <form action="{{ isset($task) ? route('tasks.update', $task->id) : route('tasks.store') }}" method="POST">
     @csrf
     @if(isset($task)) @method('PUT') @endif
-
     <div class="mb-2">
         <label>Title</label>
         <input type="text" name="title" class="form-control" value="{{ old('title', $task->title ?? '') }}" required>
