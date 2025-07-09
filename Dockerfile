@@ -5,8 +5,10 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
-    zip unzip git curl sqlite3 \
-    && docker-php-ext-install pdo pdo_sqlite mbstring exif pcntl bcmath gd
+    libzip-dev \
+    libsqlite3-dev \
+    zip unzip git curl \
+    && docker-php-ext-install pdo pdo_sqlite mbstring exif pcntl bcmath gd zip
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
